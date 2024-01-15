@@ -124,7 +124,12 @@ export default function Popup(arg) {
 				let popupOpen = thisTarget.closest('.open-popup');
 				if (popupOpen) {
 					event.preventDefault();
-					open(popupOpen.getAttribute('href'))
+					if(popupOpen.getAttribute('href')) {
+						open(popupOpen.getAttribute('href'))
+					} else if(popupOpen.dataset.href) {
+						open(popupOpen.dataset.href)
+					}
+					
 				}
 
 				let popupClose = thisTarget.closest('.popup-close');
@@ -136,7 +141,7 @@ export default function Popup(arg) {
 
 			body.addEventListener('keyup', function (event) {
 
-				if(event.code == 27 && document.querySelector('.popup.is-active')) {
+				if(event.key == "Escape" && document.querySelector('.popup.is-active')) {
 					close(document.querySelector('.popup.is-active'));
 				}
 
