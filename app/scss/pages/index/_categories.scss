@@ -1,0 +1,152 @@
+.breadcrumbs + .categories {
+	padding-top: 0px;
+	
+	@include _992 {
+		padding-top: 0px;
+	}
+}
+
+.categories {
+
+	padding-top: 90px;
+	
+	@include _992 {
+		padding-top: 158px;
+	}
+
+	// .categories__title
+
+	&__title {
+	}
+
+	// .categories__text
+
+	&__text {
+		padding-top: 20px;
+		@include _550 {
+			padding-top: 40px;
+		}
+
+		font-size: 1rem;
+		color: var(--white);
+		max-width: 508px;
+	}
+
+	&__text + &__list {
+		margin-top: 27px;
+	}
+
+	// .categories__list
+
+	&__list {
+		margin-top: 70px;
+
+		display: grid;
+
+		grid-template-columns: repeat(2,1fr);
+		grid-auto-rows: 1fr;
+		&.add-border {
+			gap: 10px;
+		}
+		
+		@media (min-width: 375px) {
+			grid-template-columns: repeat(3,1fr);
+
+			&.add-border {
+				gap: 10px;
+				grid-template-columns: repeat(2,1fr);
+			}
+		}
+
+		
+
+		@include _550 {
+			gap: 70px 60px;
+			grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+
+			&.add-border {
+				gap: 30px;
+				grid-template-columns: repeat(auto-fill,minmax(180px, 1fr));
+			}
+		}
+
+		gap: 50px 10px;
+
+		&.add-border li {
+			border-radius: 20px;
+			border: 1px solid #7F469B;
+
+			padding: 20px 5px;
+
+			@include _550 {
+				padding: 23px;
+			}
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			a {
+				display: block;
+				position: relative;
+				width: 100%;
+
+				@media (any-hover: hover) {
+					&::before {
+						content: '';
+						position: absolute;
+						left: 50%; top: 50%;
+						transform: translate(-50%,-45%);
+						width: 200px; height: 200px;
+						border-radius: 50%;
+						background: var(--accent-circle-gradient);
+						z-index: -1;
+
+						opacity: 0; visibility: hidden;
+						transition: opacity .3s ease, visibility .3s ease;
+					}
+
+					&:hover::before {
+						opacity: 1; visibility: visible;
+					}
+					
+					&:active::before {
+						opacity: 0.7; visibility: visible;
+					}
+				}
+			}
+
+			text-align: center;
+
+			img {
+				object-fit: contain;
+			}
+
+			h3 {
+				margin: 20px auto 0;
+
+				color: var(--white);
+				text-align: center;
+				font-family: var(--title-font);
+				font-weight: 700;
+				line-height: 110%;
+
+				max-width: 160px;
+
+				font-size: 0.875rem;
+
+				@media (min-width: 420px) {
+					font-size: 1rem;
+					margin: 30px auto 0;
+				}
+
+				@include _550 {
+					font-size: 1.125rem;
+				}
+				
+			}
+		}
+	}
+}

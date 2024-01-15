@@ -1,0 +1,40 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" aria-hidden="true">
+			<picture>
+				<source srcset="img/decor-hero-background.avif" type="image/avif">
+				<source srcset="img/decor-hero-background.webp" type="image/webp">
+				<img src="img/decor-hero-background.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Помилка 404</span>
+		</div>
+		<section class="not-found container">
+			<div class="not-found__col">
+				<h2 class="not-found__title section-title">
+					Помилка 404
+				</h2>
+				<h3 class="not-found__sub-title title">
+					Сторінку, на яку ви перейшли, не знайдено.
+				</h3>
+				<div class="not-found__text">
+					<p>Якщо Ви перейшли на цю сторінку за посиланням з листа, переконайтеся, що посилання не було перекручено вашим поштовим клієнтом. </p>
+					<p>У разі, якщо посилання в листі розділено на частини переносами рядка, ви можете заново відтворити його, скопіювавши частини по черзі в адресний рядок браузера.</p>
+				</div>
+				<a href="#" class="not-found__button button">
+					На головну сторінку
+				</a>
+			</div>
+			<div class="not-found__col visible-on-desktop">
+				<strong class="not-found__code">
+					404
+				</strong>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

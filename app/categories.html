@@ -1,0 +1,83 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" aria-hidden="true">
+			<picture>
+				<source srcset="img/decor-hero-background.avif" type="image/avif">
+				<source srcset="img/decor-hero-background.webp" type="image/webp">
+				<img src="img/decor-hero-background.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Комплексные решения</span>
+		</div>
+		<section class="categories container">
+			<h2 class="categories__title section-title">
+				Комплексные решения
+			</h2>
+			<div class="categories__text">
+				<p>
+					Обладнання згідно переліку та вимог МОН України за кращими цінами в Україні!
+				</p>
+			</div>
+			<ul class="categories__list add-border">
+				@@loop("html/_categories-item.html", [
+
+					{
+						"icon": "1",
+						"title": "STEM-лабораторії МОН №574",
+					},
+					{
+						"icon": "2",
+						"title": "Мультимедійне презентаційне обладнання",
+					},
+					{
+						"icon": "3",
+						"title": "Лінгафонний клас",
+					},
+					{
+						"icon": "4",
+						"title": "Комп'ютерний клас",
+					},
+					{
+						"icon": "5",
+						"title": "Комп'ютерна, акустична та периферійна техніка",
+					},
+					{
+						"icon": "6",
+						"title": "Інтерактивна підлога",
+					},
+
+					{
+						"icon": "7",
+						"title": "Дошкільна освіта (ДНЗ)",
+					},
+					{
+						"icon": "8",
+						"title": "Початкова школа НУШ",
+					},
+					{
+						"icon": "9",
+						"title": "Фізика",
+					},
+					{
+						"icon": "10",
+						"title": "Біологія",
+					},
+					{
+						"icon": "1",
+						"title": "Географія",
+					},
+					{
+						"icon": "7",
+						"title": "Хімія",
+					},
+
+				])
+			</ul>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+	<meta name="theme-color" content="#43325F">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+	<noscript>
+		<style>
+			.image-aspect-ratio img {
+				width: 100%;
+				height: auto;
+				position: static;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__message">
+				<div class="header__message--body">
+					<div class="header__message--text">
+						<svg width="20" height="20" viewBox="0 0 48 48">
+							<use xlink:href="img/sprites.svg#delivery"></use>
+						</svg>
+						<b>Безкоштовна доставка для бюджетних організацій</b>
+					</div>
+					<button class="header__message--close" type="button">
+						<svg width="20" height="20" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#close-2"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="header__panel visible-on-desktop container is-large">
+				<ul class="header__tel">
+					<li>
+						<a href="tel:+380737040887">
+							<svg width="20" height="20" viewBox="0 0 48 48">
+								<use xlink:href="img/sprites.svg#tel"></use>
+							</svg>
+							<span>
+								+380 (73) 704-08-87
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380957040887">
+							<span>
+								+380 (95) 704-08-87
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380687040887">
+							<span>
+								+380 (68) 704-08-87
+							</span>
+						</a>
+					</li>
+				</ul>
+				<div class="header__info is-fill-auto">
+					<svg width="20" height="20" viewBox="0 0 48 48">
+						<use xlink:href="img/sprites.svg#verifed"></use>
+					</svg>
+					<b>Учасник Prozorromarket</b>
+				</div>
+				<div class="header__drop-down">
+					<button class="header__drop-down--target" type="button">
+						<svg width="20" height="20" viewBox="0 0 48 48">
+							<use xlink:href="img/sprites.svg#language"></use>
+						</svg>
+						<span>UA</span>
+						<svg width="20" height="20" viewBox="0 0 48 48">
+							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+						</svg>
+					</button>
+					<div class="header__drop-down--block">
+						<ul class="header__drop-down--list">
+							<li>
+								<a href="#">
+									UA
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									RU
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__info">
+					<svg width="20" height="20" viewBox="0 0 48 48">
+						<use xlink:href="img/sprites.svg#map-point"></use>
+					</svg>
+					<b>Украина, Чернигов, ул. Старобелоусская, 63</b>
+				</div>
+				<div class="header__info">
+					<svg width="20" height="20" viewBox="0 0 48 48">
+						<use xlink:href="img/sprites.svg#time"></use>
+					</svg>
+					<b>ПН-ПТ с 09:00 до 18:00</b>
+				</div>
+			</div>
+			<div class="header__block container is-large">
+				<div class="header__logo">
+					<a href="index.html" class="header__logo--link">
+						<img src="img/logo-min.svg" alt="Логотип" width="40" height="40" loading="lazy" class="header__logo--img visible-on-mob">
+						<picture class="visible-on-desktop">
+							<source srcset="img/logo.avif" type="image/avif">
+							<source srcset="img/logo.webp" type="image/webp">
+							<img src="img/logo.png" alt="Логотип" width="150" height="40" style="--width: 269px; --height: 54px;" loading="lazy" class="header__logo--img">
+						</picture>
+					</a>
+				</div>
+				<div class="header__add-nav visible-on-mob">
+					<ul>
+						<li>
+							<a href="#login-popup" class="open-popup" title="Акаунт">
+								<svg width="26" height="26" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="favorites.html" title="Обране">
+								<svg width="26" height="26" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#favorite"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="cart.html" title="Кошик">
+								<svg width="26" height="26" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<nav class="header__nav">
+					<div class="header__nav--body">
+						<ul class="header__nav--list">
+							<li>
+								<a href="about-us.html">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="catalog.html">
+									Каталог
+								</a>
+							</li>
+							<li>
+								<a href="pricelist.html">
+									Прайс
+								</a>
+							</li>
+							<li>
+								<a href="about-us.html#consultation">
+									Консультація з підготовки до тендеру
+								</a>
+							</li>
+							<li>
+								<a href="certificates-and-orders.html">
+									Сертифікати та накази
+								</a>
+							</li>
+						</ul>
+						<div class="header__add visible-on-mob">
+							<ul class="header__tel">
+								<li>
+									<a href="tel:+380737040887">
+										<svg width="20" height="20" viewBox="0 0 48 48">
+											<use xlink:href="img/sprites.svg#tel"></use>
+										</svg>
+										<span>
+											+380 (73) 704-08-87
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="tel:+380957040887">
+										<span>
+											+380 (95) 704-08-87
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="tel:+380687040887">
+										<span>
+											+380 (68) 704-08-87
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div class="header__drop-down">
+								<button class="header__drop-down--target" type="button">
+									<svg width="20" height="20" viewBox="0 0 48 48">
+										<use xlink:href="img/sprites.svg#language"></use>
+									</svg>
+									<span>UA</span>
+									<svg width="20" height="20" viewBox="0 0 48 48">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</button>
+								<div class="header__drop-down--block">
+									<ul class="header__drop-down--list">
+										<li>
+											<a href="#">
+												UA
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												RU
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												EN
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="header__info is-fill-auto">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#verifed"></use>
+								</svg>
+								<b>Учасник Prozorromarket</b>
+							</div>
+							<div class="header__info">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#map-point"></use>
+								</svg>
+								<b>Украина, Чернигов, ул. Старобелоусская, 63</b>
+							</div>
+							<div class="header__info">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#time"></use>
+								</svg>
+								<b>ПН-ПТ с 09:00 до 18:00</b>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<div class="header__add-nav visible-on-desktop">
+					<ul>
+						<li>
+							<a href="#login-popup" class="open-popup" title="Акаунт">
+								<svg width="26" height="26" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#user"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="favorites.html" title="Обране">
+								<svg width="26" height="26" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#favorite"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="cart.html" title="Кошик">
+								<svg width="26" height="26" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<button class="header__burger" type="button" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__background" aria-hidden="true">
+				<picture>
+					<source srcset="img/decor-hero-background.avif" type="image/avif">
+					<source srcset="img/decor-hero-background.webp" type="image/webp">
+					<img src="img/decor-hero-background.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<div class="breadcrumbs container">
+				<a href="index.html" class="breadcrumbs__link">Головна</a>
+				<span class="breadcrumbs__separator">-</span>
+				<span class="breadcrumbs__current">Каталог</span>
+			</div>
+			<section class="catalog container">
+				<div class="catalog__decor" aria-hidden="true">
+					<picture>
+						<source srcset="img/decor-element.avif" type="image/avif">
+						<source srcset="img/decor-element.webp" type="image/webp">
+						<img src="img/decor-element.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+				<h2 class="catalog__title section-title">
+					Каталог
+				</h2>
+				<div class="catalog__aside">
+					<div class="catalog__categories">
+						<button class="catalog__categories_target button visible-on-mob" type="button">
+							Категории
+						</button>
+						<div class="catalog__categories_block">
+							<div>
+								<ul class="catalog__categories_list">
+									<li>
+										<a href="#">
+											<span>STEM-лабораторії МОН №574</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Мультимедійне презентаційне обладнання</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Лінгафонний клас</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Комп'ютерний клас</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Комп'ютерна, акустична та периферійна техніка</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Інтерактивна підлога</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Дошкільна освіта (ДНЗ)</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Початкова школа НУШ</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Фізика</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Біологія</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>Географія</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>STEM-лабораторії МОН №574</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>STEM-лабораторії МОН №574</span>
+											<i>
+												<svg width="20" height="20" viewBox="0 0 20 20">
+													<use xlink:href="img/sprites.svg#arrow-next"></use>
+												</svg>
+											</i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog__main">
+					<search class="catalog__search" role="search">
+						<form>
+							<input type="search" name="search" placeholder="Пошук по каталогу" required>
+							<button type="submit" title="Поиск">
+								<svg width="26" height="26" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</search>
+					<ul class="catalog__list products-list">
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-1.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-1.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-1.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-2.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-2.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-2.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-3.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-3.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-3.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-4.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-4.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-4.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-1.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-1.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-1.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-2.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-2.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-2.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-3.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-3.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-3.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+								<picture>
+									<source srcset="img/product-cards/product-card-image-4.avif" type="image/avif">
+									<source srcset="img/product-cards/product-card-image-4.webp" type="image/webp">
+									<img src="img/product-cards/product-card-image-4.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+					</ul>
+					<div class="catalog__pagination pagination">
+						<a href="#" class="pagination__link">
+							Перша
+						</a>
+						<div class="pagination__list">
+							<a href="#">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#" class="is-current">4</a>
+							<span>...</span>
+							<a href="#">8</a>
+							<a href="#">9</a>
+						</div>
+						<a href="#" class="pagination__link">
+							Остання
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer container">
+			<div class="footer__logo">
+				<a href="index.html" class="footer__logo--link">
+					<picture>
+						<source srcset="img/logo.avif" type="image/avif">
+						<source srcset="img/logo.webp" type="image/webp">
+						<img src="img/logo.png" alt="" width="269" height="54" loading="lazy" class="footer__logo--img">
+					</picture>
+				</a>
+			</div>
+			<div class="footer__text">
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+				</p>
+			</div>
+			<div class="footer__tel">
+				<h2>Телефони</h2>
+				<ul>
+					<li>
+						<a href="tel:+380737040887">
+							+38 (073) 704 08 87
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380687040887">
+							+38 (068) 704 08 87
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380957040887">
+							+38 (095) 704 08 87
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__contacts">
+				<h2>Контакти</h2>
+				<ul>
+					<li>
+						<a href="mailto:navchalne.sales@gmail.com">
+							navchalne.sales@gmail.com
+						</a>
+					</li>
+					<li>
+						<a href="mailto:sales@for-school.com.ua">
+							sales@for-school.com.ua
+						</a>
+					</li>
+					<li class="footer__contacts_margin">
+						<a href="#">
+							Украина, Чернигов
+							Ул. Старобелоусская, 63
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Facebook" target="_blank">
+							<svg width="26" height="26" viewBox="0 0 48 48">
+								<use xlink:href="img/sprites.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Instagram" target="_blank">
+							<svg width="26" height="26" viewBox="0 0 48 48">
+								<use xlink:href="img/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="YouTube" target="_blank">
+							<svg width="26" height="26" viewBox="0 0 48 48">
+								<use xlink:href="img/sprites.svg#youtube"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Viber" target="_blank">
+							<svg width="26" height="26" viewBox="0 0 26 26">
+								<use xlink:href="img/sprites.svg#viber"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Telegram" target="_blank">
+							<svg width="26" height="26" viewBox="0 0 26 26">
+								<use xlink:href="img/sprites.svg#telegram"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__copyright">
+				© 2019-2023 Навчальне Обладнання. All rights reserved
+			</div>
+		</footer>
+	</div>
+
+	<div class="popup" id="register-popup" style="display: none;">
+		<div class="popup-wrapper">
+			<div class="popup-bg popup-close"></div>
+			<div class="popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Закрити">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close-3"></use>
+					</svg>
+				</button>
+				<div class="popup-container">
+					<h2 class="popup-title title">
+						Регистрация
+					</h2>
+					<div class="popup-text">
+						<p>
+							Регистрация позволит Вам получить накопительную скидку и купить следующий заказ по более выгодной цене
+						</p>
+					</div>
+					<form method="post" class="popup-form">
+						<label class="popup-form__item">
+							<span class="is-required">ФИО Контактного лица</span>
+							<span class="input-label">
+								<input type="text" name="name" required placeholder="Введите имя" value="Игорь Иванович" class="input">
+							</span>
+						</label>
+						<label class="popup-form__item">
+							<span class="is-required">E-mail</span>
+							<span class="input-label">
+								<input type="email" name="email" required placeholder="Введите свой email" class="input">
+							</span>
+						</label>
+						<label class="popup-form__item">
+							<span class="is-required">Телефон</span>
+							<span class="input-label">
+								<input type="tel" name="phone" required placeholder="Введите номер телефона" class="input">
+							</span>
+						</label>
+						<div class="popup-form__item">
+							<span class="is-required">Пароль</span>
+							<span class="input-label">
+								<input type="password" name="password" required placeholder="Введите пароль" class="input">
+								<button class="password-toggle" type="button" title="Показать/скрыть пароль">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#visibility"></use>
+									</svg>
+								</button>
+							</span>
+						</div>
+						<div class="popup-form__text">
+							<p>
+								Регестрируясь на сайте Вы соглашаетесь на <a href="#">обработку личных данных</a>
+							</p>
+						</div>
+						<button class="popup-form__submit button is-mode-1" type="submit">
+							Відправити
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="login-popup" style="display: none;">
+		<div class="popup-wrapper">
+			<div class="popup-bg popup-close"></div>
+			<div class="popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Закрити">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close-3"></use>
+					</svg>
+				</button>
+				<div class="popup-container">
+					<h2 class="popup-title title">
+						Вход
+					</h2>
+					<form method="post" class="popup-form">
+						<label class="popup-form__item">
+							<span class="is-required">E-mail</span>
+							<span class="input-label">
+								<input type="email" name="email" required placeholder="Введите свой email" class="input">
+							</span>
+						</label>
+						<div class="popup-form__item">
+							<span class="is-required">Пароль</span>
+							<span class="input-label">
+								<input type="password" name="password" required placeholder="Введите пароль" class="input">
+								<button class="password-toggle" type="button" title="Показать/скрыть пароль">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#visibility"></use>
+									</svg>
+								</button>
+							</span>
+						</div>
+						<div class="popup-form__text">
+							<p>
+								<a href="#reset-password-popup" class="open-popup popup-close">Забули пароль?</a>
+								<br><br>
+								<a href="#register-popup" class="open-popup popup-close">Зареєструватися</a>
+							</p>
+						</div>
+						<button class="popup-form__submit button is-mode-1" type="submit">
+							Войти
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="reset-password-popup" style="display: none;">
+		<div class="popup-wrapper">
+			<div class="popup-bg popup-close"></div>
+			<div class="popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Закрити">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close-3"></use>
+					</svg>
+				</button>
+				<div class="popup-container">
+					<h2 class="popup-title title">
+						Восстановление пароля
+					</h2>
+					<div class="popup-text">
+						<p>
+							Введите свою почту и мы отправим вам письмо с временным паролем
+						</p>
+					</div>
+					<form method="post" class="popup-form">
+						<label class="popup-form__item">
+							<span class="is-required">E-mail</span>
+							<span class="input-label">
+								<input type="email" name="email" required placeholder="Введите свой email" class="input">
+							</span>
+						</label>
+						<div class="popup-form__text">
+							<p>
+								<a href="#change-password-popup" class="open-popup popup-close">Посилання на попап зміни пароля</a>
+							</p>
+						</div>
+						<button class="popup-form__submit button is-mode-1" type="submit">
+							Продолжить
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="change-password-popup" style="display: none;">
+		<div class="popup-wrapper">
+			<div class="popup-bg popup-close"></div>
+			<div class="popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Закрити">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close-3"></use>
+					</svg>
+				</button>
+				<div class="popup-container">
+					<h2 class="popup-title title">
+						Изменение пароля
+					</h2>
+					<form method="post" class="popup-form">
+						<label class="popup-form__item">
+							<span class="is-required">Текущий или временный пароль</span>
+							<span class="input-label">
+								<input type="password" name="current-password" required placeholder="Введите пароль" class="input">
+								<button class="password-toggle" type="button" title="Показать/скрыть пароль">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#visibility"></use>
+									</svg>
+								</button>
+							</span>
+						</label>
+						<div class="popup-form__text">
+							<p>
+								<a href="#reset-password-popup" class="open-popup popup-close">Забули пароль?</a>
+							</p>
+						</div>
+						<label class="popup-form__item">
+							<span class="is-required">Новый пароль</span>
+							<span class="input-label">
+								<input type="password" name="new-password" required placeholder="Введите новый пароль" class="input">
+								<button class="password-toggle" type="button" title="Показать/скрыть пароль">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#visibility"></use>
+									</svg>
+								</button>
+							</span>
+						</label>
+						<label class="popup-form__item">
+							<span class="is-required">Новый пароль ещё раз</span>
+							<span class="input-label">
+								<input type="password" name="new-password-2" required placeholder="Введите еще раз новый пароль" class="input">
+								<button class="password-toggle" type="button" title="Показать/скрыть пароль">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#visibility"></use>
+									</svg>
+								</button>
+							</span>
+						</label>
+						<button class="popup-form__submit button is-mode-1" type="submit">
+							сохранить
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="order-popup" style="display: none;">
+		<div class="popup-wrapper">
+			<div class="popup-bg popup-close"></div>
+			<div class="popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Закрити">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close-3"></use>
+					</svg>
+				</button>
+				<div class="popup-container">
+					<h2 class="popup-title title">
+						Оформление заказа
+					</h2>
+					<div class="popup-text">
+						<p>
+							Если Вы хотите получить персональную скидку или
+							стать участником бонусной системы -
+							<a href="#register-popup" class="open-popup popup-close">Зарегистрируйтесь</a> или
+							<a href="#login-popup" class="open-popup popup-close">Авторизуйтесь</a>
+							в личном кабинете, прежде чем оформить этот заказ
+						</p>
+					</div>
+					<form method="post" class="popup-form">
+						<label class="popup-form__item">
+							<span class="is-required">E-mail</span>
+							<span class="input-label">
+								<input type="email" name="email" required placeholder="Введите свой email" class="input">
+							</span>
+						</label>
+						<label class="popup-form__item">
+							<span class="is-required">Телефон</span>
+							<span class="input-label">
+								<input type="tel" name="phone" required placeholder="Введите номер телефона" class="input">
+							</span>
+						</label>
+						<label class="popup-form__checkbox checkbox">
+							<input type="checkbox" name="receive-email" class="checkbox-input">
+							<span class="checkbox-element">
+								<svg width="17" height="17" viewBox="0 0 17 17">
+									<use xlink:href="img/sprites.svg#check"></use>
+								</svg>
+							</span>
+							<span class="checkbox-text">
+								Бажаю отримати на адресу електронної пошти примірник Договору поставки та Рахунок
+							</span>
+						</label>
+						<button class="popup-form__submit button is-mode-1" type="submit">
+							Оформити замовлення
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="favorites-popup" style="display: none;">
+		<div class="popup-wrapper">
+			<div class="popup-bg popup-close"></div>
+			<div class="popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Закрити">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close-3"></use>
+					</svg>
+				</button>
+				<div class="popup-container">
+					<h2 class="popup-title title">
+						Товары из избранного
+					</h2>
+					<form method="post" class="popup-form">
+						<label class="popup-form__item">
+							<span class="is-required">E-mail</span>
+							<span class="input-label">
+								<input type="email" name="email" required placeholder="Введите свой email" class="input">
+							</span>
+						</label>
+						<button class="popup-form__submit button is-mode-1" type="submit">
+							Отправить
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="thanks-popup" style="display: none;">
+		<div class="popup-wrapper">
+			<div class="popup-bg popup-close"></div>
+			<div class="popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Закрити">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#close-3"></use>
+					</svg>
+				</button>
+				<div class="popup-container">
+					<h2 class="popup-title title">
+						Спасибо
+					</h2>
+					<div class="popup-text">
+						<p>
+							Ваше Коммерческое предложение будет отправлено менеджером в ближайшее время
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

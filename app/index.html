@@ -1,0 +1,208 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="index-hero container">
+			<div class="index-hero__background" aria-hidden="true">
+				<div class="index-hero__background--image">
+					<picture>
+						<source srcset="img/index/hero/background-decor.avif" type="image/avif">
+						<source srcset="img/index/hero/background-decor.webp" type="image/webp">
+						<img src="img/index/hero/background-decor.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+				<div class="index-hero__background--item"></div>
+				<div class="index-hero__background--item"></div>
+				<div class="index-hero__background--item"></div>
+				<div class="index-hero__background--item"></div>
+				<div class="index-hero__background--item"></div>
+			</div>
+			<div class="index-hero__logo">
+				<div class="index-hero__logo--image">
+					<img src="img/ua-min-logo.svg" width="177" height="140" loading="lazy" alt="">
+				</div>
+				<div class="index-hero__logo--text">
+					Навчальне <br> Обладнання
+				</div>
+			</div>
+			<search class="index-hero__search">
+				<form class="index-hero__search--form" method="post">
+					<label>
+						<input type="search" name="search" placeholder="Пошук по каталогу">
+					</label>
+					<button type="submit" title="Пошук">
+						<svg width="26" height="26" viewBox="0 0 48 48">
+							<use xlink:href="img/sprites.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+			</search>
+		</section>
+		<section class="categories container">
+			<h2 class="categories__title section-title">
+				Комплексні рішення <br> щодо кабінетів
+			</h2>
+			<ul class="categories__list">
+				@@loop("html/_categories-item.html", [
+
+					{
+						"icon": "1",
+						"title": "STEM-лабораторії МОН №574",
+					},
+					{
+						"icon": "2",
+						"title": "Мультимедійне презентаційне обладнання",
+					},
+					{
+						"icon": "3",
+						"title": "Лінгафонний клас",
+					},
+					{
+						"icon": "4",
+						"title": "Комп'ютерний клас",
+					},
+					{
+						"icon": "5",
+						"title": "Комп'ютерна, акустична та периферійна техніка",
+					},
+					{
+						"icon": "6",
+						"title": "Інтерактивна підлога",
+					},
+
+					{
+						"icon": "7",
+						"title": "Дошкільна освіта (ДНЗ)",
+					},
+					{
+						"icon": "8",
+						"title": "Початкова школа НУШ",
+					},
+					{
+						"icon": "9",
+						"title": "Фізика",
+					},
+					{
+						"icon": "10",
+						"title": "Біологія",
+					},
+					{
+						"icon": "1",
+						"title": "Географія",
+					},
+					{
+						"icon": "7",
+						"title": "Хімія",
+					},
+
+				])
+			</ul>
+		</section>
+		<section class="products container">
+			<h2 class="products__title section-title">
+				Нові освітні рішення
+			</h2>
+			<ul class="products__list products-list">
+				@@loop("html/_products-card.html", [
+
+					{
+						"class": "products__card",
+						"image": "1",
+					},
+					{
+						"class": "products__card",
+						"image": "2",
+					},
+					{
+						"class": "products__card",
+						"image": "3",
+					},
+					{
+						"class": "products__card",
+						"image": "4",
+					},
+
+					{
+						"class": "products__card",
+						"image": "1",
+					},
+					{
+						"class": "products__card",
+						"image": "2",
+					},
+					{
+						"class": "products__card",
+						"image": "3",
+					},
+					{
+						"class": "products__card",
+						"image": "4",
+					},
+
+				])
+			</ul>
+		</section>
+		<section class="statistics container">
+			<h2 class="visually-hidden">Статистика</h2>
+			<div class="statistics__background" aria-hidden="true">
+				<picture>
+					<source srcset="img/index/statistics/statistics-decor.avif" type="image/avif">
+					<source srcset="img/index/statistics/statistics-decor.webp" type="image/webp">
+					<img src="img/index/statistics/statistics-decor.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<ul class="statistics__list">
+				<li>
+					<p>
+						<strong>1200+</strong>
+						<span>80+ млн.</span>
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>80+ млн.</strong>
+						<span>Объём продаж в грн.</span>
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>400+</strong>
+						<span>Выигранных тендеров</span>
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>1200+</strong>
+						<span>Клієнтів</span>
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>80+ млн.</strong>
+						<span>Объём продаж в грн.</span>
+					</p>
+				</li>
+			</ul>
+		</section>
+		<section class="reviews container">
+			<h2 class="reviews__title section-title">
+				Відгуки
+			</h2>
+			<div class="reviews__slider splide">
+				<div class="reviews__track splide__track">
+					<ul class="reviews__list splide__list">
+						@@loop("html/_reviews-slide.html", [
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+						])
+					</ul>
+				</div>
+				<div class="reviews__pagination slider-pagination splide__pagination"></div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

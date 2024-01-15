@@ -1,0 +1,121 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" aria-hidden="true">
+			<picture>
+				<source srcset="img/decor-hero-background.avif" type="image/avif">
+				<source srcset="img/decor-hero-background.webp" type="image/webp">
+				<img src="img/decor-hero-background.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Корзина</span>
+		</div>
+		<section class="cart container" data-price-sum-container-id="cart-list">
+			<div class="cart__decor" aria-hidden="true">
+				<picture>
+					<source srcset="img/decor-element.avif" type="image/avif">
+					<source srcset="img/decor-element.webp" type="image/webp">
+					<img src="img/decor-element.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<h2 class="cart__title section-title">
+				Готові рішення з фізики
+			</h2>
+			<div class="cart__group">
+				<h3 class="cart__group_title">
+					Механіка (демонстраційне обладнання)
+				</h3>
+				<div class="cart__group_head">
+					<span>Ціна за одиницю</span>
+					<span>Шт</span>
+					<span>Сума</span>
+				</div>
+				<ul class="cart__list">
+					@@loop("html/_cart-item.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+			</div>
+			<div class="cart__group">
+				<h3 class="cart__group_title">
+					Мультимедійне обладнання
+				</h3>
+				<div class="cart__group_head">
+					<span>Ціна за одиницю</span>
+					<span>Шт</span>
+					<span>Сума</span>
+				</div>
+				<ul class="cart__list">
+					@@loop("html/_cart-item.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+			</div>
+			<div class="cart__footer">
+				<div class="cart__footer_col">
+					<div class="cart__message">
+						<label for="order-message">Комментарий к заказу</label>
+						<p><textarea name="order-message" placeholder="Введите текст" id="order-message"></textarea></p>
+					</div>
+				</div>
+				<div class="cart__footer_col">
+					<table class="cart__total">
+						<tr>
+							<td>Минимальная сумма заказа</td>
+							<td>2 000 ₴</td>
+						</tr>
+						<tr class="add-hr">
+							<td>
+								<b>Всього</b>
+							</td>
+							<td>
+								<strong data-price-sum-result="cart-list" data-price-discount="500" data-price-currency="₴"></strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Знижка
+							</td>
+							<td>
+								500 ₴
+							</td>
+						</tr>
+					</table>
+					<label class="cart__checkbox checkbox">
+						<input type="checkbox" name="receive-docs" class="checkbox-input">
+						<span class="checkbox-element">
+							<svg width="17" height="17" viewBox="0 0 17 17">
+								<use xlink:href="img/sprites.svg#check"></use>
+							</svg>
+						</span>
+						<span class="checkbox-text">
+							Бажаю отримати на адресу електронної пошти примірник Договору поставки та Рахунок
+						</span>
+					</label>
+					<button class="cart__submit button is-mode-1" type="button" aria-label="Оформити замовлення">
+						<svg width="24" height="24" viewBox="0 0 48 48">
+							<use xlink:href="img/sprites.svg#cart"></use>
+						</svg>
+						<span>
+							Оформити замовлення
+						</span>
+					</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

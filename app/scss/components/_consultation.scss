@@ -1,0 +1,67 @@
+.consultation {
+
+	&__body {
+		padding: 40px 30px;
+		border-radius: 20px;
+		background: #43325F;
+	}
+
+	// .consultation__title
+
+	&__title {
+		
+	}
+
+	// .consultation__text
+
+	&__text {
+		padding-top: 20px;
+		@include _768 {
+			padding-top: 40px;
+			font-size: 1rem;
+		}
+
+		font-size: 0.875rem;
+		line-height: 140%;
+	}
+
+	// .consultation__form
+
+	&__form {
+		margin-top: 20px;
+
+		display: grid;
+		@include _550 {
+			grid-template-columns: 1fr 1fr;
+		}
+		
+		@include _768 {
+			margin-top: 40px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		gap: 15px;
+		.input {
+			text-transform: uppercase;
+		}
+
+		&_body {
+
+		}
+
+		[type="submit"] {
+			
+			@include _550 {
+				grid-column: 2 span;
+			}
+
+			@include _768 {
+				grid-column: auto;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			gap: 25px 45px;
+		}
+	}
+}

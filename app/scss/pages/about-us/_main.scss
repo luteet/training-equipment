@@ -1,0 +1,249 @@
+@use 'sass:math';
+
+.about-us {
+
+	// .about-us__title
+
+	&__title {
+		padding-bottom: 40px;
+	}
+
+	// .about-us__wrapper
+
+	&__wrapper {
+		
+		@include _992 {
+			display: grid;
+
+			grid-template-columns: 200px calc(100% - 200px - 30px);
+			gap: 0 30px;
+		}
+
+		@media (min-width: 1440px) {
+			grid-template-columns: 299px calc(100% - 299px - 30px);
+		}
+		
+	}
+
+	// .about-us__aside
+
+	&__aside {
+		//align-self: self-start;
+		//padding-top: 30px; margin-top: -30px;
+		
+		display: none;
+		@include _992 {
+			display: block;
+		}
+	}
+
+	// .about-us__aside_nav
+
+	&__aside_nav {
+		//transform: translate(0,30px);
+		//margin-top: 30px;
+		background: #43325F;
+		padding: 20px 0;
+		border-radius: 20px;
+
+		a {
+			display: block;
+			padding: 10px 25px;
+
+			color: var(--white);
+			font-family: var(--title-font);
+			font-size: 0.875rem;
+			font-weight: 600;
+			line-height: 110%;
+
+			@media (any-hover: hover) {
+				transition: background .2s ease;
+
+				&:hover {
+					background: #554275;
+				}
+				
+				&:active {
+					background: #4b376d;
+				}
+			}
+		}
+	}
+
+	// .about-us__main
+
+	&__main {
+		width: 100%;
+		position: relative;
+
+		
+	}
+
+	&__decor {
+		display: none;
+		@include _992 {
+			display: block;
+
+			position: absolute;
+			right: 0; top: 0%;
+			width: 100%; height: 100%;
+			overflow: hidden;
+
+			display: flex;
+			justify-content: flex-end;
+
+			img {
+				width: 100%; height: auto;
+				max-width: 1300px;
+				transform: translate(60%,20%);
+				object-fit: contain;
+				opacity: .5;
+			}
+		}
+
+		@include _container {
+			img {
+				opacity: 1;
+			}
+		}
+	}
+
+	// .about-us__content
+
+	&__content {
+		//overflow: hidden;
+		width: 100%;
+		margin-top: -40px;
+
+		article {
+
+			position: relative;
+
+			&:first-child {
+				padding-top: 40px;
+			}
+
+			&:not(:first-child) {
+				padding-top: 40px; margin-top: 40px;
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0; top: -1px;
+					width: 100%; height: 1px;
+					background: #7F469B;
+				}
+			}
+
+			h3 {
+				font-family: var(--title-font);
+				font-weight: 700;
+	
+				font-size: 1.25rem;
+				padding-bottom: 10px;
+	
+				@include _768 {
+					padding-bottom: 20px;
+					font-size: 1.5rem;
+				}
+	
+				@include _992 {
+					font-size: 1.875rem;
+					padding-bottom: 30px;
+				}
+			}
+
+			p:not(:first-child) {
+				padding-top: 10px;
+			}
+
+			p {
+				font-size: 0.875rem;
+				line-height: 1.5;
+				@include _550 {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	// .about-us__content_row
+
+	&__content_row {
+		display: grid;
+		@include _992 {
+			grid-template-columns: 1.3fr 1fr;
+		}
+	}
+
+	// .about-us__content_col
+
+	&__content_col {
+		.image-aspect-ratio {
+			display: block;
+		}
+	}
+
+	// .about-us__consultation
+
+	&__consultation {
+		padding-top: 30px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%; top: 50%;
+			transform: translate(-50%,-50%);
+			width: 1400px; height: 1400px;
+			border-radius: 50%;
+			background: var(--accent-circle-gradient);
+			z-index: -1;
+			opacity: .7;
+		}
+	}
+
+	&__reviews {
+
+		overflow: hidden;
+
+		.reviews__title {
+			@include _992 {
+				padding-left: calc(200px + 30px);
+			}
+
+			@media (min-width: 1440px) {
+				padding-left: calc(299px + 30px);
+			}
+		}
+
+		.splide__track {
+			margin-left: var(--container-padding); margin-right: var(--container-padding);
+			@include _992 {
+				margin-left: max(calc(200px + 30px + 15px), calc(50% - #{math.div($containerMin - 650, 2)}px));
+				margin-right: var(--container-padding);
+			}
+
+			@media (min-width: 1200px) {
+				margin-right: 0;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			-webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
+		}
+		
+		@media (min-width: 1440px) {
+			-webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
+			.splide__track {
+				margin-left: max(calc(299px + 30px + 15px), calc(50% - #{math.div($containerMin - 650, 2)}px));
+			}
+		}
+
+		.reviews__slide {
+			min-width: 100%;
+			@include _992 {
+				min-width: 633px;
+			}
+		}
+	}
+}

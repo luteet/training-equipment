@@ -1,0 +1,48 @@
+.breadcrumbs {
+
+	margin-top: 30px; margin-bottom: 20px;
+	text-transform: uppercase;
+	
+	@include _992 {
+		margin-bottom: 5px;
+	}
+
+	// .breadcrumbs__link
+
+	&__link {
+		color: #918D98;
+		font-size: 0.875rem;
+		font-weight: 600;
+		line-height: 110%;
+		text-transform: uppercase;
+
+		@media (any-hover: hover) {
+			transition: color .2s ease;
+			&:hover {
+				color: var(--accent-hover);
+			}
+			
+			&:active {
+				color: var(--accent-active);
+			}
+		}
+	}
+
+	// .breadcrumbs__separator
+
+	&__separator {
+		font-size: 0.875rem;
+		font-weight: 600;
+		line-height: 110%;
+		text-transform: uppercase;
+	}
+
+	// .breadcrumbs__current
+
+	&__current {
+		font-size: 0.875rem;
+		font-weight: 600;
+		line-height: 110%;
+		text-transform: uppercase;
+	}
+}

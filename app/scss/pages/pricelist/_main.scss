@@ -1,0 +1,107 @@
+.pricelist {
+
+	// .pricelist__title
+
+	&__title {
+		padding-bottom: 40px;
+	}
+
+	// .pricelist__item
+
+	&__item {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		color: var(--white);
+		font-family: var(--title-font);
+		font-size: 0.875rem;
+		font-weight: 700;
+		line-height: normal;
+		text-transform: uppercase;
+
+		padding: 7px 7px 7px 30px;
+
+		border-radius: 100px;
+		background: rgba(35, 28, 49, 0.50);
+
+		@media (any-hover: hover) {
+			&:hover i {
+				background: var(--accent-hover);
+			}
+
+			&:active i {
+				background: var(--accent-active);
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			border: 1px solid transparent;
+			border-radius: 50px;
+			background: linear-gradient(180deg, #9C50B8 0%, #BE9CFA 100%) border-box;
+			-webkit-mask:
+				linear-gradient(#fff 0 0) padding-box, 
+				linear-gradient(#fff 0 0);
+			-webkit-mask-composite: xor;
+			mask-composite: exclude;
+			pointer-events: none;
+		}
+
+		i {
+			flex: 0 0 32px; width: 32px; height: 32px;
+			@include _550 {
+				flex: 0 0 46px; width: 46px; height: 46px;
+			}
+			border-radius: 50%;
+
+			background: rgba(67, 50, 95, 0.80);
+			@media (any-hover: hover) {
+				transition: background .2s ease;
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				width: 60%; height: auto;
+			}
+		}
+	}
+
+	// .pricelist__block
+
+	&__block {
+		padding-top: 40px;
+		@include _550 {
+			padding-top: 50px;
+		}
+	}
+
+	// .pricelist__block_title
+
+	&__block_title {
+	}
+
+	// .pricelist__list
+
+	&__list {
+		padding-top: 20px;
+
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 15px;
+		
+		@include _550 {
+			padding-top: 40px;
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+		}
+	}
+}

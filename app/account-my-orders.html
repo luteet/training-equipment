@@ -1,0 +1,58 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" aria-hidden="true">
+			<picture>
+				<source srcset="img/decor-hero-background.avif" type="image/avif">
+				<source srcset="img/decor-hero-background.webp" type="image/webp">
+				<img src="img/decor-hero-background.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Личный кабинет</span>
+		</div>
+		<section class="account container">
+			<h2 class="account__title section-title">
+				Личный кабинет
+			</h2>
+			<div class="account__aside" data-sticky-container>
+				@@include("html/_account-nav.html")
+			</div>
+			<div class="account__main">
+				<div class="account__orders">
+					<h3 class="account__orders_title min-title">
+						Мои заказы
+					</h3>
+					<table class="account__orders_table">
+						<thead>
+							<tr>
+								<th>ID заказа</th>
+								<th>Товаров, шт.</th>
+								<th>Сумма</th>
+								<th>Скидка</th>
+								<th>Дата</th>
+							</tr>
+						</thead>
+						<tbody>
+							@@loop("html/_account-order-tr.html", [
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+								{},
+							])
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

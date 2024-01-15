@@ -1,0 +1,203 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" style="background-image: url(img/decor-hero-background.webp); padding-top: 24%;" aria-hidden="true"></div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Личный кабинет</span>
+		</div>
+		<section class="account container">
+			<h2 class="account__title section-title">
+				Личный кабинет
+			</h2>
+			<div class="account__aside" data-sticky-container>
+				@@include("html/_account-nav.html")
+			</div>
+			<div class="account__main">
+				<div class="account__block">
+					<div class="account__block_header">
+						<h3 class="account__block_title min-title">
+							Личные данные
+						</h3>
+						<button type="button" class="account__block_edit" title="Редактировать">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#edit"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="account__block_wrapper">
+						<div class="account__block_group">
+							<label class="account__block_item">
+								<span>ФИО Директора</span>
+								<span class="value">Игорь Иванович</span>
+							</label>
+							<label class="account__block_item">
+								<span>Название организации</span>
+								<span class="value">Игорь Иванович</span>
+							</label>
+							<label class="account__block_item">
+								<span>E-mail *</span>
+								<span class="value">sdfkjh@gmail.com</span>
+							</label>
+							<label class="account__block_item">
+								<span>Код ЄДРПОУ/ІПН</span>
+								<span class="value">5988898656</span>
+							</label>
+							<label class="account__block_item">
+								<span>Телефон *</span>
+								<span class="value">+38 (099) 440 33 43</span>
+							</label>
+							<label class="account__block_item">
+								<span>ФИО Контактного лица</span>
+								<span class="value">Игорь Иванович</span>
+							</label>
+						</div>
+						<div class="account__block_group">
+							<label class="account__block_item">
+								<span>ФИО Директора</span>
+								<span class="input-label">
+									<input type="text" name="name-director" placeholder="Введите имя директора" value="Игорь Иванович" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span>Название организации</span>
+								<span class="input-label">
+									<input type="text" name="company-name" placeholder="Введите название организации" value="Игорь Иванович" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span class="is-required">E-mail</span>
+								<span class="input-label">
+									<input type="email" name="email" placeholder="Введите email" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span>Код ЄДРПОУ/ІПН</span>
+								<span class="input-label">
+									<input type="text" name="code" placeholder="Введите код ЄДРПОУ/ІПН" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span class="is-required">Телефон</span>
+								<span class="input-label">
+									<input type="tel" name="phone" placeholder="Введите номер телефона" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span>ФИО Контактного лица</span>
+								<span class="input-label">
+									<input type="text" name="contact-name" placeholder="Введите имя контактного лица" required class="input">
+								</span>
+							</label>
+							<div class="account__block_footer">
+								<button class="button is-mode-1">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#save"></use>
+									</svg>
+									<span>Сохранить</span>
+								</button>
+								<button class="button is-mode-2">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#cancel"></use>
+									</svg>
+									<span>Отменить</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="account__block">
+					<div class="account__block_header">
+						<h3 class="account__block_title min-title">
+							Адрес доставки
+						</h3>
+						<button type="button" class="account__block_edit" title="Редактировать">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#edit"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="account__block_wrapper">
+						<div class="account__block_group">
+							<label class="account__block_item">
+								<span>ФИО Директора</span>
+								<span class="value">Ул. Рокоссовского 33, г. Чернигов</span>
+							</label>
+							<label class="account__block_item">
+								<span>Название организации</span>
+								<span class="value">Игорь Иванович</span>
+							</label>
+							<label class="account__block_item">
+								<span>E-mail *</span>
+								<span class="value">ул. Всехсвятская 17, Отделение №19</span>
+							</label>
+							<label class="account__block_item">
+								<span>Код ЄДРПОУ/ІПН</span>
+								<span class="value">+38 (095) 704 08 87</span>
+							</label>
+						</div>
+						<div class="account__block_group">
+							<label class="account__block_item">
+								<span>Адрес</span>
+								<span class="input-label">
+									<input type="text" name="address" placeholder="Введите адрес" value="Ул. Рокоссовского 33, г. Чернигов" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span>ФИО Получателя</span>
+								<span class="input-label">
+									<input type="text" name="receiver-name" placeholder="Введите имя получателя" value="Игорь Иванович" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span>Отделение Новой Почты</span>
+								<span class="input-label">
+									<input type="text" name="new-post-address" placeholder="Введите отделение Новой Почты" required class="input">
+								</span>
+							</label>
+							<label class="account__block_item">
+								<span>Телефон получателя</span>
+								<span class="input-label">
+									<input type="tel" name="receiver-phone" placeholder="Введите номер телефона" required class="input">
+								</span>
+							</label>
+							<div class="account__block_footer">
+								<button class="button is-mode-1" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#save"></use>
+									</svg>
+									<span>Сохранить</span>
+								</button>
+								<button class="button is-mode-2" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="img/sprites.svg#cancel"></use>
+									</svg>
+									<span>Отменить</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="account__block">
+					<div class="account__block_header">
+						<h3 class="account__block_title min-title">
+							Настройки аккаунта
+						</h3>
+					</div>
+					<div class="account__block_wrapper">
+						<div class="account__block_group">
+							<a href="#" class="account__change_password button is-mode-2" aria-label="Изенить пароль">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="img/sprites.svg#edit-2"></use>
+								</svg>
+								<span>Изенить пароль</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

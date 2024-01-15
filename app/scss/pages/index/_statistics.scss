@@ -1,0 +1,138 @@
+.statistics {
+
+	margin-top: 95px;
+	padding-top: 103px; padding-bottom: 103px;
+
+	z-index: auto;
+
+	// .statistics__background
+
+	&__background {
+		position: absolute;
+		left: 16px; top: 0;
+		width: calc(100% - 16px - 16px); height: 100%;
+		@media (min-width: 1500px) {
+			width: calc(100% - 100px - 100px);
+			left: 100px;
+		}
+		background: var(--accent);
+		border-radius: 20px;
+
+		z-index: -1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%; top: 0;
+			transform: translate(-50%,-20%);
+			width: 1500px; height: 1500px;
+			background: var(--accent-circle-gradient);
+
+			opacity: .7;
+		}
+
+		img {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+
+	// .statistics__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+
+		gap: 50px 16px;
+		@include _550 {
+			gap: 86px 30px;
+			padding: 0 16px;
+		}
+
+		padding: 0 16px;
+
+		@media (min-width: 1500px) {
+			padding: 0;
+		}
+
+		p {
+			border-top: 3px solid var(--accent-hover);
+
+			display: inline-flex;
+			flex-direction: column;
+			text-align: center;
+
+			gap: 10px;
+
+			padding-top: 10px;
+			width: 100%;
+			@include _768 {
+				min-width: 300px;
+				width: auto;
+			}
+		}
+
+		li {
+
+			flex: 0 1 calc(50% - 10px);
+
+			@include _550 {
+				flex: 0 1 calc(50% - 20px);
+			}
+			
+			@include _992 {
+				flex: 0 1 calc(33.333% - 20px);
+			}
+
+			strong {
+				display: inline-block;
+
+				color: var(--white);
+				font-family: var(--title-font);
+				font-weight: 800;
+				line-height: 110%;
+				text-transform: uppercase;
+
+				font-size: 1.5rem;
+
+				@include _550 {
+					font-size: 2rem;
+				}
+				
+				@include _768 {
+					font-size: 3rem;
+				}
+				
+				@include _992 {
+					font-size: 3.75rem;
+				}
+			}
+
+			span {
+				color: var(--white);
+				font-weight: 400;
+				line-height: 110%;
+
+				font-size: 1rem;
+
+				@include _550 {
+					font-size: 1.25rem;
+					text-transform: uppercase;
+				}
+				
+				@include _768 {
+					font-size: 1.35rem;
+				}
+				
+				@include _992 {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}

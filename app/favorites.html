@@ -1,0 +1,100 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" style="background-image: url(img/decor-hero-background.webp); padding-top: 24%;" aria-hidden="true"></div>
+		<div class="main__footer_decor" aria-hidden="true">
+			<picture>
+				<source srcset="img/decor-element.avif" type="image/avif">
+				<source srcset="img/decor-element.webp" type="image/webp">
+				<img src="img/decor-element.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Избранное</span>
+		</div>
+		<section class="favorites container">
+			<h2 class="favorites__title section-title">
+				Избранное
+			</h2>
+			<a href="#favorites-popup" class="favorites__receive_email open-popup">
+				Желаю получить Коммерческое предложение по Email для товаров в Избранное
+			</a>
+			<ul class="favorites__list products-list">
+				@@loop("html/_products-card.html", [
+
+					{
+						"class": "favorites__card",
+						"image": "1",
+					},
+					{
+						"class": "favorites__card",
+						"image": "2",
+					},
+					{
+						"class": "favorites__card",
+						"image": "3",
+					},
+					{
+						"class": "favorites__card",
+						"image": "4",
+					},
+
+					{
+						"class": "favorites__card",
+						"image": "1",
+					},
+					{
+						"class": "favorites__card",
+						"image": "2",
+					},
+					{
+						"class": "favorites__card",
+						"image": "3",
+					},
+					{
+						"class": "favorites__card",
+						"image": "4",
+					},
+
+					{
+						"class": "favorites__card",
+						"image": "1",
+					},
+					{
+						"class": "favorites__card",
+						"image": "2",
+					},
+					{
+						"class": "favorites__card",
+						"image": "3",
+					},
+					{
+						"class": "favorites__card",
+						"image": "4",
+					},
+
+				])
+			</ul>
+			<div class="favorites__pagination pagination">
+				<a href="#" class="pagination__link">
+					Перша
+				</a>
+				<div class="pagination__list">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#" class="is-current">4</a>
+					<span>...</span>
+					<a href="#">8</a>
+					<a href="#">9</a>
+				</div>
+				<a href="#" class="pagination__link">
+					Остання
+				</a>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

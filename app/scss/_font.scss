@@ -1,0 +1,101 @@
+
+@font-face {
+	@include font-include('Exo 2', 400, swap, normal, 'Exo2-Regular');
+}
+
+@font-face {
+	@include font-include('Exo 2', 600, swap, normal, 'Exo2-SemiBold');
+}
+
+@font-face {
+	@include font-include('Exo 2', 700, swap, normal, 'Exo2-Bold');
+}
+
+@font-face {
+	@include font-include('Exo 2', 800, swap, normal, 'Exo2-ExtraBold');
+}
+
+@font-face {
+	@include font-include('Manrope', 400, swap, normal, 'Manrope-Regular');
+}
+
+/* @font-face {
+	@include font-include('Manrope', 800, swap, normal, 'Manrope-ExtraBold');
+} */
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 115%;
+
+	font-size: 1.875rem;
+
+	@include _768 {
+		font-size: 2.5rem;
+	}
+
+	@include _992 {
+		font-size: 3.125rem;
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 700;
+
+	font-size: 1.25rem;
+
+	@include _768 {
+		font-size: 1.5rem;
+	}
+
+	@include _992 {
+		font-size: 1.875rem;
+	}
+
+}
+
+.min-title {
+	
+	font-family: var(--title-font);
+	font-weight: 700;
+
+	font-size: 1.125rem;
+
+	@include _768 {
+		font-size: 1.25rem;
+	}
+
+	@include _992 {
+		font-size: 1.5rem;
+	}
+
+}
+
+.section-title {
+
+	color: var(--white);
+	font-family: var(--title-font);
+	font-weight: 800;
+	line-height: 110%;
+
+	font-size: 2.25rem; // 36px
+
+	@include _550 {
+		font-size: 2.5rem; // 40px
+	}
+	
+	@include _768 {
+		font-size: 3.125rem; // 50px
+	}
+	
+	@include _992 {
+		font-size: 3.75rem; // 60px
+	}
+
+}
+
+.txt-center {
+	text-align: center;
+}

@@ -1,0 +1,59 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" aria-hidden="true">
+			<picture>
+				<source srcset="img/decor-hero-background.avif" type="image/avif">
+				<source srcset="img/decor-hero-background.webp" type="image/webp">
+				<img src="img/decor-hero-background.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Сертификаты и приказы</span>
+		</div>
+		<section class="certificate_orders">
+			<h2 class="certificate_orders__title section-title container">
+				Сертификаты и приказы
+			</h2>
+			<article class="certificate_orders__orders orders container">
+				<h3 class="orders__title title">
+					Накази
+				</h3>
+				<ul class="orders__list">
+					@@loop("html/_order.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+			</article>
+			<article class="certificate_orders__certificates certificates container">
+				<div class="certificates__decor" aria-hidden="true">
+					<picture>
+						<source srcset="img/decor-element.avif" type="image/avif">
+						<source srcset="img/decor-element.webp" type="image/webp">
+						<img src="img/decor-element.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+				<div class="certificates__container">
+					<h3 class="certificates__title title">Сертификаты</h3>
+					<ul class="certificates__list">
+						@@loop("html/_certificate.html", [
+							{},
+							{},
+							{},
+							{},
+						])
+					</ul>
+				</div>
+			</article>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

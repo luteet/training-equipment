@@ -1,0 +1,43 @@
+@import 'mixin';
+@import 'vars';
+@import 'libs';
+@import 'null';
+@import 'global';
+@import 'font';
+@import 'form';
+
+@import 'components/header';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/checkbox';
+@import 'components/popup';
+
+@import 'pages/index/hero';
+@import 'pages/index/categories';
+@import 'pages/index/products';
+@import 'pages/index/statistics';
+@import 'pages/index/reviews';
+
+@import 'pages/catalog/main';
+
+@import 'pages/product/main';
+
+@import 'pages/product/recommended';
+
+@import 'pages/cart/main';
+
+@import 'pages/certificate-and-orders/main';
+
+@import 'pages/about-us/main';
+
+@import 'components/consultation';
+
+@import 'pages/favorites/main';
+
+@import 'pages/pricelist/main';
+
+@import 'pages/account/main';
+
+@import 'pages/not-found/main';
+
+@import 'components/footer';

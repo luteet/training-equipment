@@ -1,0 +1,49 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="main__background" aria-hidden="true">
+			<picture>
+				<source srcset="img/decor-hero-background.avif" type="image/avif">
+				<source srcset="img/decor-hero-background.webp" type="image/webp">
+				<img src="img/decor-hero-background.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<div class="breadcrumbs container">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator">-</span>
+			<span class="breadcrumbs__current">Личный кабинет</span>
+		</div>
+		<section class="account container">
+			<h2 class="account__title section-title">
+				Личный кабинет
+			</h2>
+			<div class="account__aside" data-sticky-container>
+				@@include("html/_account-nav.html")
+			</div>
+			<div class="account__main">
+				<div class="account__bonuses">
+					<h3 class="account__bonuses_title min-title">
+						Бонусы и скидки
+					</h3>
+					<ul class="account__bonuses_list">
+						<li>
+							<strong>12 %</strong>
+							<b>Активная скидка</b>
+							<p>
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							</p>
+						</li>
+						<li>
+							<strong>1 000 ₴</strong>
+							<b>Банусы на счету</b>
+							<p>
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

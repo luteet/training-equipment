@@ -1,0 +1,38 @@
+.recommended {
+
+	// .recommended__decor
+
+	&__decor {
+		display: none;
+		@include _992 {
+			display: block;
+			position: absolute;
+			right: 0; bottom: 0;
+			width: 60%; height: 100%;
+			z-index: -1;
+
+			img {
+				width: 100%; height: auto; max-width: 1300px;
+				transform: translate(60%,10%);
+			}
+		}
+	}
+
+	// .recommended__container
+
+	&__container {
+		padding-top: 40px; margin-top: 40px;
+		border-top: 1px solid #6B5294;
+	}
+
+	// .recommended__title
+
+	&__title {
+	}
+
+	// .recommended__list
+
+	&__list {
+		margin-top: 40px;
+	}
+}
