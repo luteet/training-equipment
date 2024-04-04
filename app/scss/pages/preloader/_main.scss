@@ -1,0 +1,162 @@
+.preloader {
+
+	min-height: 75vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@include _992 {
+		display: grid;
+		grid-template-rows: 1.6fr 1fr;
+		gap: 120px 0;
+		justify-content: stretch;
+	}
+
+	padding-top: 50px; padding-bottom: 50px;
+
+	// .preloader__background
+
+	&__background {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+	}
+
+	// .preloader__background_image
+
+	&__background_image {
+		position: absolute;
+		left: 0;
+
+		width: 100%;
+
+		&:nth-child(1) {
+			top: 0;
+			img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: auto; min-height: 75vh;
+				transform: translate(0,-70%);
+				object-fit: cover;
+			}
+		}
+
+		&:nth-child(2) {
+			top: 100%;
+			img {
+				position: absolute;
+				right: 0; top: 0;
+				width: 80%; height: auto;
+				transform: translate(30%,0);
+			}
+		}
+	}
+
+	// .preloader__logo
+
+	&__logo {
+		position: relative;
+		z-index: 2;
+
+		//grid-column: 1; grid-row: 2;
+
+		display: grid;
+		grid-template-columns: 90px auto;
+		align-items: center;
+		gap: 10px;
+		
+		@include _550 {
+			gap: 29px;
+			grid-template-columns: 100px auto;
+		}
+		
+		@include _992 {
+			grid-template-columns: 177px auto;
+			align-self: self-end;
+
+			width: 100%;
+		}
+
+		img {
+
+			width: 90px; height: 72px;
+		
+			@include _550 {
+				width: 100px; height: 79px;
+			}
+
+			@include _992 {
+				width: 177px; height: 140px;
+			}
+		}
+
+		b {
+			font-family: var(--title-font);
+			font-weight: 700;
+			line-height: 120%;
+			text-transform: uppercase;
+
+			font-size: 1.5rem;
+
+			@include _550 {
+				font-size: 2rem;
+			}
+			
+			@include _768 {
+				font-size: 2.5rem;
+			}
+			
+			@include _992 {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	// .preloader__text
+
+	&__text {
+
+		position: relative;
+		z-index: 2;
+
+		padding-top: 50px;
+
+		font-family: var(--title-font);
+		color: var(--white);
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: 120%;
+		text-transform: uppercase;
+		
+		@include _768 {
+			font-size: 3rem;
+		}
+		
+		@include _992 {
+			font-size: 4.375rem;
+			padding-top: 0;
+		}
+
+		span {
+			opacity: 0;
+			animation-name: fadeIn;
+			animation-duration: 0.3s;
+			animation-fill-mode: forwards;
+
+			pointer-events: none; user-select: none;
+
+			&:nth-child(1) {
+				animation-delay: var(--delay);
+			}
+
+			&:nth-child(2) {
+				animation-delay: var(--delay);
+			}
+
+			&:nth-child(3) {
+				animation-delay: var(--delay);
+			}
+		}
+	}
+}

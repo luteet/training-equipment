@@ -92,25 +92,8 @@ function images() {
 
 function scriptsLib() {
 	return src([
-		'node_modules/@splidejs/splide/dist/js/splide.min.js', // Слайдер | npm i @splidejs/splide --save-dev | https://splidejs.com/guides/getting-started/
-		//'node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js', // autoscroll для слайдера | $ npm install @splidejs/splide-extension-auto-scroll --save-dev | https://splidejs.com/guides/getting-started/
-		//'node_modules/@splidejs/splide-extension-grid/dist/js/splide-extension-grid.min.js', // Сетка для слайдера | npm install @splidejs/splide-extension-grid --save-dev | https://splidejs.com/guides/getting-started/
-		//'node_modules/vanilla-lazyload/dist/lazyload.min.js', // Lazyload img | npm i vanilla-lazyload --save-dev | https://www.npmjs.com/package/vanilla-lazyload
-		//'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js', // Полифил для window.scroll() | npm i smoothscroll-polyfill --save-dev
-		//'node_modules/clipboard/dist/clipboard.min.js', // Копирование в буфер обмена | npm i clipboard --save-dev | https://www.npmjs.com/package/clipboard
-		//'node_modules/aos/dist/aos.js', // Анимация | npm i aos --save-dev | https://www.npmjs.com/package/aos
-		//'node_modules/gsap/dist/gsap.min.js', // GSAP (Animation) | npm i gsap --save-dev | https://www.npmjs.com/package/gsap
-		//'node_modules/gsap/dist/ScrollTrigger.min.js', // GSAP (Animation) | npm i gsap --save-dev | https://www.npmjs.com/package/gsap
-		//'node_modules/split-type/umd/index.min.js', // split text | npm i split-type --save-dev | https://www.npmjs.com/package/split-type
-		//'app/js/ScrollSmoother.min.js', // GSAP
-		//'node_modules/slim-select/dist/slimselect.min.js', // Select | npm i slim-select --save-dev | https://www.npmjs.com/package/slim-select
-		'node_modules/sticky-js/dist/sticky.min.js' // Sticky | npm i sticky-js --save-dev | https://www.npmjs.com/package/sticky-js
-		//'node_modules/nouislider/dist/nouislider.min.js', // Кастомный input[range] | npm i nouislider --save-dev | https://www.npmjs.com/package/nouislider
-		//'node_modules/simplebar/dist/simplebar.min.js', // Кастомный скролбар | npm i simplebar --save-dev | https://www.npmjs.com/package/simplebar
-		//'node_modules/fslightbox/index.js', // Галерея | npm i fslightbox --save-dev | https://www.npmjs.com/package/fslightbox
-		//'node_modules/chart.js/dist/chart.min.js', // График | npm i chart.js --save-dev | https://www.npmjs.com/package/chart.js
-		//'node_modules/vanillajs-datepicker/dist/js/datepicker.min.js', // Выбор даты | npm install --save-dev vanillajs-datepicker | https://mymth.github.io/vanillajs-datepicker/#/
-		//'node_modules/swiper/swiper-bundle.min.js', // Слайдер
+		'node_modules/@splidejs/splide/dist/js/splide.min.js',
+		'node_modules/sticky-js/dist/sticky.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -168,6 +151,20 @@ function styles() {
 		}))
 		.pipe(minCSS())
 		.pipe(concat('style.min.css'))
+		.pipe(dest('dist/css'))
+		.pipe(browserSync.stream())
+}
+
+function styles2() {
+	return src('app/scss/style-2.scss')
+		.pipe(scss({outputStyle: 'compressed'}))
+		.pipe(mediaGroup())
+		.pipe(autoprefixer({
+			overrideBrowserslist: ['last 1 version'],
+			cascade: false
+		}))
+		.pipe(minCSS())
+		.pipe(concat('style-2.min.css'))
 		.pipe(dest('dist/css'))
 		.pipe(browserSync.stream())
 }
@@ -259,7 +256,7 @@ function sprites() {
 }
 
 function watching() {
-	watch(['app/scss/**/*.scss'], series(styles, stylesOriginal));
+	watch(['app/scss/**/*.scss'], series(styles, styles2, stylesOriginal));
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/json/*.json'], json);
 	watch(['app/video/*.*'], video);
@@ -271,6 +268,7 @@ function watching() {
 
 exports.images = images;
 exports.styles = styles;
+exports.styles2 = styles2;
 exports.stylesOriginal = stylesOriginal;
 exports.watching = watching;
 exports.browsersyncStart = browsersyncStart;
@@ -292,5 +290,5 @@ exports.zipDel = zipDel;
 exports.fonts = series(ttf2woff2Convert, fonts);
 exports.folder = series(delFolder, createFolder);
 exports.zip = series(createFolder, createZip, zipDel);
-exports.start = parallel(stylesLib, styles, watching, scriptsLib, scriptsMin, scripts, htmlCompilation, json, sprites, browsersyncStart);
-exports.default = parallel(stylesLib, styles, watching, scriptsLib, scriptsMin, scripts, htmlCompilation, json, sprites, browsersync);
+exports.start = parallel(stylesLib, styles, styles2, watching, scriptsLib, scriptsMin, scripts, htmlCompilation, json, sprites, browsersyncStart);
+exports.default = parallel(stylesLib, styles, styles2, watching, scriptsLib, scriptsMin, scripts, htmlCompilation, json, sprites, browsersync);

@@ -292,32 +292,31 @@
 		</header>
 
 		<main class="main">
-			<div class="main__background" style="background-image: url(img/decor-hero-background.webp); padding-top: 24%;" aria-hidden="true"></div>
-			<div class="breadcrumbs container">
-				<a href="index.html" class="breadcrumbs__link">Головна</a>
-				<span class="breadcrumbs__separator">-</span>
-				<span class="breadcrumbs__current">Помилка 404</span>
-			</div>
-			<section class="not-found container">
-				<div class="not-found__col">
-					<h2 class="not-found__title section-title">
-						Помилка 404
-					</h2>
-					<h3 class="not-found__sub-title title">
-						Сторінку, на яку ви перейшли, не знайдено.
-					</h3>
-					<div class="not-found__text">
-						<p>Якщо Ви перейшли на цю сторінку за посиланням з листа, переконайтеся, що посилання не було перекручено вашим поштовим клієнтом. </p>
-						<p>У разі, якщо посилання в листі розділено на частини переносами рядка, ви можете заново відтворити його, скопіювавши частини по черзі в адресний рядок браузера.</p>
+			<section class="preloader container">
+				<div class="preloader__background" aria-hidden="true">
+					<div class="preloader__background_image">
+						<picture>
+							<source srcset="img/index/hero/background-decor.avif" type="image/avif">
+							<source srcset="img/index/hero/background-decor.webp" type="image/webp">
+							<img src="img/index/hero/background-decor.png" alt="" width="0" height="0" loading="lazy">
+						</picture>
 					</div>
-					<a href="#" class="not-found__button button">
-						На головну сторінку
-					</a>
+					<div class="preloader__background_image">
+						<picture>
+							<source srcset="img/decor-element.avif" type="image/avif">
+							<source srcset="img/decor-element.webp" type="image/webp">
+							<img src="img/decor-element.png" alt="" width="0" height="0" loading="lazy">
+						</picture>
+					</div>
 				</div>
-				<div class="not-found__col visible-on-desktop">
-					<strong class="not-found__code">
-						404
-					</strong>
+				<div class="preloader__logo">
+					<img src="img/ua-min-logo.svg" alt="" width="177" height="140" loading="lazy">
+					<b>Навчальне <br> Обладнання</b>
+				</div>
+				<div class="preloader__text">
+					<span style="--delay: 1s;">Все,</span>
+					<span style="--delay: 1.3s;">Що</span>
+					<span style="--delay: 1.6s;">Необхідно</span>
 				</div>
 			</section>
 		</main>

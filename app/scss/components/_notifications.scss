@@ -1,0 +1,73 @@
+.notifications {
+
+	position: fixed;
+	right: 15px; bottom: 15px;
+
+	pointer-events: none;
+
+	z-index: 2;
+
+	@include _550 {
+		right: 20px;
+		top: max(20px, var(--top, calc(var(--height-header) / 2)));
+	}
+
+	// .notifications__block
+
+	&__block {
+		background: linear-gradient(90.02deg, #231C31 0.01%, #43325F 99.99%);
+		border: 1px solid #CC7FE8;
+		box-shadow: 0px 6px 25px rgba(255, 255, 255, 0.1);
+		border-radius: 10px;
+		padding: 10px;
+
+		display: flex;
+		align-items: center;
+
+		max-width: 485px; min-height: 90px; width: calc(100vw - 15px - 15px);
+
+		@include _550 {
+			padding: 20px 20px 20px 38px;
+			min-height: 131px;
+		}
+
+		opacity: 0; visibility: hidden;
+		transition: opacity .3s ease, visibility .3s ease;
+
+		&.is-active {
+			opacity: 1; visibility: visible;
+		}
+	}
+
+	// .notifications__block_icon
+
+	&__block_icon {
+		flex: 0 0 50px;
+
+		@include _550 {
+			flex: 0 0 60px;
+		}
+
+		display: flex;
+		align-items: center;
+
+		&.is-success {
+			color: var(--accent-2);
+		}
+		&.is-failure {
+			color: tomato;
+		}
+	}
+
+	// .notifications__block_text
+
+	&__block_text {
+		font-weight: 600;
+		font-size: 0.875rem;
+		line-height: 138.888889%;
+
+		@include _550 {
+			font-size: 1rem;
+		}
+	}
+}

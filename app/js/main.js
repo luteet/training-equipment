@@ -2,6 +2,7 @@
 import clicksEvents from './clicks.js';
 import sliders from './sliders.js';
 import Popup from './popup.js';
+import notifications from './notifications.js';
 
 const 
 	body = document.querySelector('body'),
@@ -225,4 +226,7 @@ document.querySelectorAll("form").forEach(form => {
 		
 	})
 })
+
+
+notifications();
 

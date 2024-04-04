@@ -7,6 +7,7 @@
 	<meta name="theme-color" content="#43325F">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style-2.min.css">
 	<noscript>
 		<style>
 			.image-aspect-ratio img {
@@ -141,7 +142,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="cart.html" title="Кошик">
+							<a href="cart.html" title="Кошик" data-length="1">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -153,7 +154,7 @@
 					<div class="header__nav--body">
 						<ul class="header__nav--list">
 							<li>
-								<a href="about-us.html">
+								<a href="about-us.html" class="is-current">
 									Про компанію
 								</a>
 							</li>
@@ -259,10 +260,11 @@
 				<div class="header__add-nav visible-on-desktop">
 					<ul>
 						<li>
-							<a href="#login-popup" class="open-popup" title="Акаунт">
+							<a href="#login-popup" class="open-popup is-full" title="Акаунт">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#user"></use>
 								</svg>
+								<span>Тарас Шевченко</span>
 							</a>
 						</li>
 						<li>
@@ -273,7 +275,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="cart.html" title="Кошик">
+							<a href="cart.html" title="Кошик" data-length="1">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -411,7 +413,7 @@
 				</h2>
 				<ul class="products__list products-list">
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-1.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-1.webp" type="image/webp">
@@ -427,7 +429,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -435,7 +437,7 @@
 						</button>
 					</li>
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-2.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-2.webp" type="image/webp">
@@ -451,7 +453,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -459,7 +461,7 @@
 						</button>
 					</li>
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-3.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-3.webp" type="image/webp">
@@ -475,7 +477,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -483,7 +485,7 @@
 						</button>
 					</li>
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-4.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-4.webp" type="image/webp">
@@ -499,7 +501,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -507,7 +509,7 @@
 						</button>
 					</li>
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-1.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-1.webp" type="image/webp">
@@ -523,7 +525,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -531,7 +533,7 @@
 						</button>
 					</li>
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-2.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-2.webp" type="image/webp">
@@ -547,7 +549,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -555,7 +557,7 @@
 						</button>
 					</li>
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-3.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-3.webp" type="image/webp">
@@ -571,7 +573,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -579,7 +581,7 @@
 						</button>
 					</li>
 					<li class="products__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 							<picture>
 								<source srcset="img/product-cards/product-card-image-4.avif" type="image/avif">
 								<source srcset="img/product-cards/product-card-image-4.webp" type="image/webp">
@@ -595,7 +597,7 @@
 							<ins>3 800 ₴</ins>
 							<del>3 800 ₴</del>
 						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
+						<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 							<svg width="20" height="20" viewBox="0 0 48 48">
 								<use xlink:href="img/sprites.svg#cart"></use>
 							</svg>
@@ -665,7 +667,10 @@
 									</div>
 									<div class="reviews__slide_person reviews__person">
 										<div class="reviews__person_avatar">
-											<img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy">
+											<!-- <img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy"> -->
+											<svg width="26" height="26" viewBox="0 0 48 48">
+												<use xlink:href="img/sprites.svg#user"></use>
+											</svg>
 										</div>
 										<div class="reviews__person_info">
 											<h3>Олена петрівна</h3>
@@ -700,7 +705,10 @@
 									</div>
 									<div class="reviews__slide_person reviews__person">
 										<div class="reviews__person_avatar">
-											<img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy">
+											<!-- <img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy"> -->
+											<svg width="26" height="26" viewBox="0 0 48 48">
+												<use xlink:href="img/sprites.svg#user"></use>
+											</svg>
 										</div>
 										<div class="reviews__person_info">
 											<h3>Олена петрівна</h3>
@@ -735,7 +743,10 @@
 									</div>
 									<div class="reviews__slide_person reviews__person">
 										<div class="reviews__person_avatar">
-											<img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy">
+											<!-- <img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy"> -->
+											<svg width="26" height="26" viewBox="0 0 48 48">
+												<use xlink:href="img/sprites.svg#user"></use>
+											</svg>
 										</div>
 										<div class="reviews__person_info">
 											<h3>Олена петрівна</h3>
@@ -770,7 +781,10 @@
 									</div>
 									<div class="reviews__slide_person reviews__person">
 										<div class="reviews__person_avatar">
-											<img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy">
+											<!-- <img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy"> -->
+											<svg width="26" height="26" viewBox="0 0 48 48">
+												<use xlink:href="img/sprites.svg#user"></use>
+											</svg>
 										</div>
 										<div class="reviews__person_info">
 											<h3>Олена петрівна</h3>
@@ -805,7 +819,10 @@
 									</div>
 									<div class="reviews__slide_person reviews__person">
 										<div class="reviews__person_avatar">
-											<img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy">
+											<!-- <img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy"> -->
+											<svg width="26" height="26" viewBox="0 0 48 48">
+												<use xlink:href="img/sprites.svg#user"></use>
+											</svg>
 										</div>
 										<div class="reviews__person_info">
 											<h3>Олена петрівна</h3>
@@ -840,7 +857,10 @@
 									</div>
 									<div class="reviews__slide_person reviews__person">
 										<div class="reviews__person_avatar">
-											<img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy">
+											<!-- <img src="https://picsum.photos/id/275/512/512" alt="" width="59" height="59" loading="lazy"> -->
+											<svg width="26" height="26" viewBox="0 0 48 48">
+												<use xlink:href="img/sprites.svg#user"></use>
+											</svg>
 										</div>
 										<div class="reviews__person_info">
 											<h3>Олена петрівна</h3>
@@ -882,7 +902,8 @@
 			</div>
 			<div class="footer__text">
 				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+					dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 				</p>
 			</div>
 			<div class="footer__tel">
@@ -986,7 +1007,8 @@
 					</h2>
 					<div class="popup-text">
 						<p>
-							Регистрация позволит Вам получить накопительную скидку и купить следующий заказ по более выгодной цене
+							Регистрация позволит Вам получить накопительную скидку и купить следующий заказ по более
+							выгодной цене
 						</p>
 					</div>
 					<form method="post" class="popup-form">
@@ -1281,6 +1303,31 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="notifications">
+		<div class="notifications__block">
+			<div class="notifications__block_icon is-success">
+				<!-- .is-failure -->
+				<svg width="37" height="37">
+					<use href="img/sprites.svg#circle-check-2"></use>
+				</svg>
+			</div>
+			<div class="notifications__block_text">
+				<p>
+					Товар успешно добавлен в корзину
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		setTimeout(() => {
+			document.querySelectorAll(".notifications__block").forEach(block => block.classList.add("is-active"));
+		}, 1000)
+		setTimeout(() => {
+			document.querySelectorAll(".notifications__block").forEach(block => block.classList.remove("is-active"));
+		}, 3000)
+	</script>
 
 	<script src="js/libs.min.js"></script>
 	<script type="module" src="js/main.js"></script>

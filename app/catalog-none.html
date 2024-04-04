@@ -172,114 +172,14 @@
 						</button>
 					</form>
 				</search>
-				<div class="catalog__loader">
-					<div class="catalog__loader_block">
-						<img src="img/loader.svg" width="53" height="53" alt="">
-						<span>Loading...</span>
+				<div class="catalog__none">
+					<div class="catalog__none_block">
+						<img src="img/not-founded.svg" width="250" height="204" alt="">
+						<span>Ничего нет</span>
 					</div>
-				</div>
-				<ul class="catalog__list products-list is-hidden" style="display: none;">
-					<li class="catalog__card product-card">
-						<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель">
-							<picture>
-								<source srcset="img/product-cards/null-card-image.avif" type="image/avif">
-								<source srcset="img/product-cards/null-card-image.webp" type="image/webp">
-								<img src="img/product-cards/null-card-image.png" alt="" width="300" height="300" loading="lazy">
-							</picture>
-						</a>
-						<h3 class="product-card__title">
-							<a href="product.html">
-								Глобус-модель "Будова Сонця"
-							</a>
-						</h3>
-						<div class="product-card__price">
-							<ins>3 800 ₴</ins>
-							<del>3 800 ₴</del>
-						</div>
-						<button class="product-card__add-cart button is-min-on-mob" type="button">
-							<svg width="20" height="20" viewBox="0 0 48 48">
-								<use xlink:href="img/sprites.svg#cart"></use>
-							</svg>
-							<span>Додати до кошика</span>
-						</button>
-					</li>
-					@@loop("html/_products-card.html", [
-
-						{
-							"class": "catalog__card",
-							"image": "1",
-						},
-						{
-							"class": "catalog__card",
-							"image": "2",
-						},
-						{
-							"class": "catalog__card",
-							"image": "3",
-						},
-						{
-							"class": "catalog__card",
-							"image": "4",
-						},
-
-						{
-							"class": "catalog__card",
-							"image": "1",
-						},
-						{
-							"class": "catalog__card",
-							"image": "2",
-						},
-						{
-							"class": "catalog__card",
-							"image": "3",
-						},
-						{
-							"class": "catalog__card",
-							"image": "4",
-						},
-
-					])
-				</ul>
-				<div class="catalog__pagination pagination">
-					<a href="#" class="pagination__link">
-						Перша
-					</a>
-					<div class="pagination__list">
-						<a href="#">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#" class="is-current">4</a>
-						<span>...</span>
-						<a href="#">8</a>
-						<a href="#">9</a>
-					</div>
-					<a href="#" class="pagination__link">
-						Остання
-					</a>
 				</div>
 			</div>
 		</section>
-		<script>
-
-			const loader = document.querySelector(".catalog__loader"),
-				  list = document.querySelector(".catalog__list");
-
-			setTimeout(() => {
-
-				loader.classList.add("is-hidden");
-
-				setTimeout(() => {
-					//loader.classList.remove("is-hidden");
-					list.style.removeProperty("display");
-					loader.style.display = "none";
-					setTimeout(() => {
-						list.classList.remove("is-hidden");
-					},0)
-				},400)
-				
-			},2000)
-		</script>
 	</main>
 
 @@include("html/_footer.html")

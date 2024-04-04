@@ -7,6 +7,7 @@
 	<meta name="theme-color" content="#43325F">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style-2.min.css">
 	<noscript>
 		<style>
 			.image-aspect-ratio img {
@@ -141,7 +142,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="cart.html" title="Кошик">
+							<a href="cart.html" title="Кошик" data-length="1">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -153,7 +154,7 @@
 					<div class="header__nav--body">
 						<ul class="header__nav--list">
 							<li>
-								<a href="about-us.html">
+								<a href="about-us.html" class="is-current">
 									Про компанію
 								</a>
 							</li>
@@ -259,10 +260,11 @@
 				<div class="header__add-nav visible-on-desktop">
 					<ul>
 						<li>
-							<a href="#login-popup" class="open-popup" title="Акаунт">
+							<a href="#login-popup" class="open-popup is-full" title="Акаунт">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#user"></use>
 								</svg>
+								<span>Тарас Шевченко</span>
 							</a>
 						</li>
 						<li>
@@ -273,7 +275,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="cart.html" title="Кошик">
+							<a href="cart.html" title="Кошик" data-length="1">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -461,9 +463,39 @@
 							</button>
 						</form>
 					</search>
-					<ul class="catalog__list products-list">
+					<div class="catalog__loader">
+						<div class="catalog__loader_block">
+							<img src="img/loader.svg" width="53" height="53" alt="">
+							<span>Loading...</span>
+						</div>
+					</div>
+					<ul class="catalog__list products-list is-hidden" style="display: none;">
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель">
+								<picture>
+									<source srcset="img/product-cards/null-card-image.avif" type="image/avif">
+									<source srcset="img/product-cards/null-card-image.webp" type="image/webp">
+									<img src="img/product-cards/null-card-image.png" alt="" width="300" height="300" loading="lazy">
+								</picture>
+							</a>
+							<h3 class="product-card__title">
+								<a href="product.html">
+									Глобус-модель "Будова Сонця"
+								</a>
+							</h3>
+							<div class="product-card__price">
+								<ins>3 800 ₴</ins>
+								<del>3 800 ₴</del>
+							</div>
+							<button class="product-card__add-cart button is-min-on-mob" type="button">
+								<svg width="20" height="20" viewBox="0 0 48 48">
+									<use xlink:href="img/sprites.svg#cart"></use>
+								</svg>
+								<span>Додати до кошика</span>
+							</button>
+						</li>
+						<li class="catalog__card product-card">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-1.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-1.webp" type="image/webp">
@@ -479,7 +511,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -487,7 +519,7 @@
 							</button>
 						</li>
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-2.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-2.webp" type="image/webp">
@@ -503,7 +535,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -511,7 +543,7 @@
 							</button>
 						</li>
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-3.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-3.webp" type="image/webp">
@@ -527,7 +559,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -535,7 +567,7 @@
 							</button>
 						</li>
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-4.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-4.webp" type="image/webp">
@@ -551,7 +583,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -559,7 +591,7 @@
 							</button>
 						</li>
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-1.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-1.webp" type="image/webp">
@@ -575,7 +607,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -583,7 +615,7 @@
 							</button>
 						</li>
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-2.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-2.webp" type="image/webp">
@@ -599,7 +631,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -607,7 +639,7 @@
 							</button>
 						</li>
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-3.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-3.webp" type="image/webp">
@@ -623,7 +655,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -631,7 +663,7 @@
 							</button>
 						</li>
 						<li class="catalog__card product-card">
-							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель " Будова Сонця"">
+							<a href="product.html" class="product-card__image image-aspect-ratio" style="--padding-aspect-ratio: 100%;" aria-label="Глобус-модель 'Будова Сонця'">
 								<picture>
 									<source srcset="img/product-cards/product-card-image-4.avif" type="image/avif">
 									<source srcset="img/product-cards/product-card-image-4.webp" type="image/webp">
@@ -647,7 +679,7 @@
 								<ins>3 800 ₴</ins>
 								<del>3 800 ₴</del>
 							</div>
-							<button class="product-card__add-cart button is-min-on-mob" type="button">
+							<button class="product-card__add-cart button is-min-on-mob" type="button" aria-label="Додати до кошика">
 								<svg width="20" height="20" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -674,6 +706,25 @@
 					</div>
 				</div>
 			</section>
+			<script>
+				const loader = document.querySelector(".catalog__loader"),
+					list = document.querySelector(".catalog__list");
+
+				setTimeout(() => {
+
+					loader.classList.add("is-hidden");
+
+					setTimeout(() => {
+						//loader.classList.remove("is-hidden");
+						list.style.removeProperty("display");
+						loader.style.display = "none";
+						setTimeout(() => {
+							list.classList.remove("is-hidden");
+						}, 0)
+					}, 400)
+
+				}, 2000)
+			</script>
 		</main>
 
 		<footer class="footer container">

@@ -80,6 +80,7 @@
 
 		display: grid;
 		grid-template-columns: 70px auto;
+		
 		@include _550 {
 			grid-template-columns: 100px auto;
 		}

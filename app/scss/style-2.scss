@@ -1,0 +1,285 @@
+@import 'mixin';
+@import 'vars';
+@import 'components/notifications';
+
+.categories {
+	padding-top: 50px;
+	@include _992 {
+		padding-top: 80px;
+	}
+}
+
+html {
+	scrollbar-color: var(--accent) var(--primary-1);
+}
+
+body {
+	&::-webkit-scrollbar {
+		background: var(--primary-1);
+	}
+
+	&::-webkit-scrollbar-track {
+		padding: 0.125rem;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: var(--accent);
+		border-radius: 0.375rem;
+		border: 0.25rem solid var(--primary-1);
+	}
+}
+
+.header__add-nav a[data-length] {
+	position: relative;
+	&::before {
+		content: attr(data-length);
+		position: absolute;
+		right: 0; top: 0;
+		transform: translate(20%,-10%);
+		width: 20px; height: 20px;
+		background: var(--accent-hover);
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-family: var(--title-font);
+		text-align: center;
+		font-size: 0.875rem;
+		line-height: 100%;
+		font-weight: 700;
+
+		@include _992 {
+			transform: translate(20%,-40%);
+		}
+	}
+}
+
+.product__gallery_nav_track {
+	padding: 5px 0;
+	margin: -5px 0;
+}
+
+.header__nav a.is-current {
+	text-shadow: 0px 4px 6px var(--accent-hover);
+}
+
+.product__gallery_nav_slide {
+	opacity: 1;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		left: -2px; top: -2px;
+		width: calc(100% + 4px); height: calc(100% + 4px);
+		border: 2px solid var(--accent-hover);
+		z-index: 2;
+		border-radius: 12px;
+
+		transition: opacity .3s ease;
+		opacity: 0;
+	}
+
+	&.is-active {
+		&::before {
+			opacity: 1;
+		}	
+	}
+}
+
+.header__nav--list li a {
+	@include _992 {
+		text-transform: none;
+	}
+	@media (min-width: 1300px) {
+		text-transform: uppercase;
+	}
+}
+
+.header__add-nav a {
+	min-width: 36px; min-height: 36px;
+	width: auto; height: auto;
+	border-radius: 50px;
+	color: var(--white);
+	padding: 10px;
+
+	gap: 3.5px;
+
+	span {
+		max-width: 150px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		font-size: 0.75rem;
+
+		display: none;
+
+		@media (min-width: 1200px) {
+			display: block;
+		}
+
+		@media (min-width: 1440px) {
+			font-size: 1rem;
+		}
+	}
+
+	svg {
+		width: 26px; height: 26px;
+	}
+
+	@media (min-width: 1550px) {
+		width: auto; height: auto;
+		min-width: 46px; min-height: 46px;
+	}
+
+	@include _992 {
+		svg {
+			width: 26px; height: 26px;
+		}
+		background: rgba(67, 50, 95, 0.80);
+	}
+}
+
+.header__add-nav ul {
+	gap: 5px;
+	@include _992 {
+		gap: 15px;
+	}
+}
+
+.header__logo--img {
+	@media (min-width: 1300px) {
+		width: 150px; height: auto;
+	}
+
+	@media (min-width: 1440px) {
+		width: var(--width); height: var(--height);
+	}
+}
+
+.reviews__person_avatar {
+	width: 59px; height: 59px;
+	border-radius: 50%;
+	background: var(--accent);
+	color: var(--accent-hover);
+	position: relative;
+
+	svg {
+		position: absolute;
+		left: 50%; top: 50%;
+		transform: translate(-50%,-50%);
+		width: 40px; height: 40px;
+	}
+}
+
+@keyframes loader {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+.catalog__search input {
+	border-radius: 50px 0 0 50px;
+}
+
+.catalog {
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .catalog__loader
+
+	&__loader {
+		flex: 1 1;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		opacity: 1; visibility: visible;
+		transition: opacity .3s ease, visibility .3s ease;
+
+		min-height: 50vh;
+
+		@include _992 {
+			min-height: none;
+		}
+
+		&.is-hidden {
+			opacity: 0; visibility: hidden;
+		}
+	}
+
+	// .catalog__loader_block
+
+	&__loader_block {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+
+		color: #7F469B;
+		line-height: 110%;
+		text-transform: uppercase;
+
+		img {
+			width: 53px; height: 53px; flex: 0 0 53px;
+			object-fit: contain;
+
+			animation: loader 1.5s linear 0s infinite normal forwards;
+		}
+	}
+
+	&__list {
+		opacity: 1; visibility: visible;
+		transition: opacity .3s ease, visibility .3s ease;
+
+		&.is-hidden {
+			opacity: 0; visibility: hidden;
+		}
+	}
+
+	&__none {
+		flex: 1 1;
+		min-height: 50vh;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 30px 0;
+
+		opacity: 1; visibility: visible;
+		transition: opacity .3s ease, visibility .3s ease;
+
+		&.is-hidden {
+			opacity: 0; visibility: hidden;
+		}
+
+		@include _992 {
+			min-height: none;
+		}
+	}
+
+	&__none_block {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 6px;
+
+		color: #7F469B;
+		line-height: 110%;
+		text-transform: uppercase;
+
+		img {
+			max-width: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+
+@import 'pages/preloader/main';

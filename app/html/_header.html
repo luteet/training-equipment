@@ -6,6 +6,7 @@
 	<meta name="theme-color" content="#43325F">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style-2.min.css">
 	<noscript><style>.image-aspect-ratio img { width: 100%; height: auto; position: static; }</style></noscript>
 </head>
 <body>
@@ -131,7 +132,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="cart.html" title="Кошик">
+							<a href="cart.html" title="Кошик" data-length="1">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
@@ -143,7 +144,7 @@
 					<div class="header__nav--body">
 						<ul class="header__nav--list">
 							<li>
-								<a href="about-us.html">
+								<a href="about-us.html" class="is-current">
 									Про компанію
 								</a>
 							</li>
@@ -249,10 +250,11 @@
 				<div class="header__add-nav visible-on-desktop">
 					<ul>
 						<li>
-							<a href="#login-popup" class="open-popup" title="Акаунт">
+							<a href="#login-popup" class="open-popup is-full" title="Акаунт">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#user"></use>
 								</svg>
+								<span>Тарас Шевченко</span>
 							</a>
 						</li>
 						<li>
@@ -263,7 +265,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="cart.html" title="Кошик">
+							<a href="cart.html" title="Кошик" data-length="1">
 								<svg width="26" height="26" viewBox="0 0 48 48">
 									<use xlink:href="img/sprites.svg#cart"></use>
 								</svg>
